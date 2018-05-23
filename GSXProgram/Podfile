@@ -1,0 +1,18 @@
+platform :ios, ‘9.0’
+    
+use_frameworks!
+inhibit_all_warnings!
+
+def pods_for_fixed
+#按头字母顺序方便查找
+pod 'AFNetworking', '~> 3.0'
+
+end
+
+def pods_for_targets
+pods_for_fixed
+end
+
+target 'GSXProgram'  do
+pods_for_targets
+end
